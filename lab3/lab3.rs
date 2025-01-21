@@ -65,7 +65,6 @@ fn main() {
 }
 
 
-//Структура для роботи з завданнями
 #[derive(Debug, Clone)]
 struct Task {
     id: usize,
@@ -73,7 +72,6 @@ struct Task {
     done: bool,
 }
 
-//Структура для роботи з самою програмою
 struct ToDoApp {
     users: HashMap<String, String>,
     tasks: HashMap<String, Vec<Task>>,
@@ -154,7 +152,6 @@ impl ToDoApp {
         }
     }
 
-    // Перевірка на те чи містять текстові дані : або |, позаяк вони використовуються для розділення данних при читанні файлів
     fn is_valid_input(input: &str) -> bool {
         !(input.contains(':') || input.contains('|'))
     }
